@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Auto - Location de Voitures au Maroc</title>
+    <meta name="description" content="Location de voitures de luxe et economiques au Maroc. Meilleurs tarifs et service premium.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/car_01.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold flex items-center">
+                        <i class="fas fa-car mr-2"></i>
+                        <span>Espace Auto</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="nav-link hover:text-cyan-200 transition">Accueil</a>
+                    <a href="#vehicules" class="nav-link hover:text-cyan-200 transition">Nos Véhicules</a>
+                    <a href="#services" class="nav-link hover:text-cyan-200 transition">Services</a>
+                    <a href="#tarifs" class="nav-link hover:text-cyan-200 transition">Tarifs</a>
+                    <a href="#contact" class="nav-link hover:text-cyan-200 transition">Contact</a>
+                    <a href="#reservation" class="bg-white text-cyan-600 px-4 py-2 rounded-full font-medium hover:bg-cyan-100 transition transform hover:scale-105">Réservation</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden py-4">
+                <a href="#accueil" class="block py-2 hover:text-cyan-200 transition">Accueil</a>
+                <a href="#vehicules" class="block py-2 hover:text-cyan-200 transition">Nos Véhicules</a>
+                <a href="#services" class="block py-2 hover:text-cyan-200 transition">Services</a>
+                <a href="#tarifs" class="block py-2 hover:text-cyan-200 transition">Tarifs</a>
+                <a href="#contact" class="block py-2 hover:text-cyan-200 transition">Contact</a>
+                <a href="#reservation" class="block mt-2 bg-white text-cyan-600 px-4 py-2 rounded-full font-medium w-max hover:bg-cyan-100 transition">Réservation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+        <div class="container mx-auto px-6 -mt-30 text-center text-white z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn">Location de Voitures au Maroc</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fadeIn delay-100">Découvrez notre flotte premium et profitez du meilleur service de location de voitures dans tout le Maroc</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fadeIn delay-200">
+                <a href="#vehicules" class="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-full font-medium transition transform hover:scale-105 shadow-lg">Voir nos véhicules</a>
+                <a href="#reservation" class="bg-white hover:bg-gray-100 text-cyan-600 px-8 py-3 rounded-full font-medium transition transform hover:scale-105 shadow-lg">Réserver maintenant</a>
+            </div>
+        </div>
+        
+        <!-- Glass effect stats -->
+        <div class="absolute bottom-30 left-0 right-0">
+            <div class="container mx-auto px-6">
+                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-xl p-6 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 shadow-lg">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-cyan-600">200+</div>
+                        <div class="text-cyan-400">Véhicules</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-cyan-600">15</div>
+                        <div class="text-cyan-400">Agences</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-cyan-600">10K+</div>
+                        <div class="text-cyan-400">Clients satisfaits</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-cyan-600">24/7</div>
+                        <div class="text-cyan-400">Assistance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Véhicules Section -->
+    <section id="vehicules" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Notre Flotte de Véhicules</h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Choisissez parmi notre large sélection de voitures allant des modèles économiques aux véhicules de luxe.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Véhicule 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mercedes Classe A" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">Nouveau</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mercedes Classe A</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <div class="flex items-center mr-4">
+                                <i class="fas fa-users mr-2"></i>
+                                <span>5 places</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt mr-2"></i>
+                                <span>Automatique</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-cyan-600">600 DH</span>
+                                <span class="text-gray-500">/jour</span>
+                            </div>
+                            <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-full transition">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Véhicule 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Toyota RAV4" class="w-full h-56 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Toyota RAV4</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <div class="flex items-center mr-4">
+                                <i class="fas fa-users mr-2"></i>
+                                <span>5 places</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt mr-2"></i>
+                                <span>Automatique</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-cyan-600">450 DH</span>
+                                <span class="text-gray-500">/jour</span>
+                            </div>
+                            <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-full transition">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Véhicule 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Renault Clio" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">Populaire</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Renault Clio</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <div class="flex items-center mr-4">
+                                <i class="fas fa-users mr-2"></i>
+                                <span>5 places</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt mr-2"></i>
+                                <span>Manuelle</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-cyan-600">300 DH</span>
+                                <span class="text-gray-500">/jour</span>
+                            </div>
+                            <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-full transition">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-full font-medium transition">Voir toute la flotte</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi nous choisir -->
+    <section id="services" class="py-20 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pourquoi choisir Espace Auto?</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl text-center hover:bg-opacity-20 transition">
+                    <div class="text-4xl mb-4">
+                        <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-shield-alt text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl text-cyan-500 font-bold mb-3">Assurance Complète</h3>
+                    <p class="text-cyan-300">Tous nos véhicules sont assurés tous risques pour votre tranquillité d'esprit.</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl text-center hover:bg-opacity-20 transition">
+                    <div class="text-4xl mb-4">
+                        <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl text-cyan-500 font-bold mb-3">Livraison Partout</h3>
+                    <p class="text-cyan-300">Nous livrons le véhicule à votre hôtel, aéroport ou domicile dans tout le Maroc.</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl text-center hover:bg-opacity-20 transition">
+                    <div class="text-4xl mb-4">
+                        <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-headset text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl text-cyan-500 font-bold mb-3">Assistance 24/7</h3>
+                    <p class="text-cyan-300">Notre équipe est disponible 24h/24 et 7j/7 pour répondre à vos besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifs Section -->
+    <section id="tarifs" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nos Tarifs Compétitifs</h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Des tarifs transparents sans surprise, avec des options adaptées à tous les budgets.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Forfait Économique -->
+                <div class="bg-gray-100 rounded-xl p-8 text-center hover:shadow-lg transition transform hover:scale-105">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Forfait Économique</h3>
+                    <div class="text-5xl font-bold text-cyan-600 mb-6">250 DH<span class="text-lg text-gray-500">/jour</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Voitures compactes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Kilométrage illimité</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Assurance de base</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span>Livraison gratuite</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 py-3 rounded-full font-medium transition">Choisir ce forfait</button>
+                </div>
+                
+                <!-- Forfait Standard (Populaire) -->
+                <div class="bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-xl p-8 text-center shadow-xl transform -translate-y-4">
+                    <div class="absolute top-0 right-6 bg-pink-500 text-white px-3 py-1 rounded-b-lg text-sm font-medium">Populaire</div>
+                    <h3 class="text-xl font-bold mb-4">Forfait Standard</h3>
+                    <div class="text-5xl font-bold mb-6">400 DH<span class="text-lg text-cyan-100">/jour</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-2"></i>
+                            <span>Voitures intermédiaires</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-2"></i>
+                            <span>Kilométrage illimité</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-2"></i>
+                            <span>Assurance tous risques</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-2"></i>
+                            <span>Livraison gratuite</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white hover:bg-gray-100 text-cyan-600 py-3 rounded-full font-medium transition transform hover:scale-105">Choisir ce forfait</button>
+                </div>
+                
+                <!-- Forfait Premium -->
+                <div class="bg-gray-100 rounded-xl p-8 text-center hover:shadow-lg transition transform hover:scale-105">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Forfait Premium</h3>
+                    <div class="text-5xl font-bold text-cyan-600 mb-6">600 DH<span class="text-lg text-gray-500">/jour</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Voitures de luxe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Kilométrage illimité</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Assurance premium</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Livraison VIP</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-full font-medium transition">Choisir ce forfait</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de Réservation -->
+    <section id="reservation" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-gradient-to-br from-cyan-500 to-blue-600 text-white p-8 flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold mb-4">Réservez Votre Véhicule</h2>
+                        <p class="mb-6">Remplissez le formulaire et notre équipe vous contactera dans les plus brefs délais pour confirmer votre réservation.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt mr-4 text-2xl"></i>
+                                <div>
+                                    <div class="font-bold">Téléphone</div>
+                                    <div>+212 6 12 34 56 78</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-4 text-2xl"></i>
+                                <div>
+                                    <div class="font-bold">Email</div>
+                                    <div>contact@espaceauto.ma</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock mr-4 text-2xl"></i>
+                                <div>
+                                    <div class="font-bold">Heures d'ouverture</div>
+                                    <div>Lun-Dim: 8h-20h</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form id="booking-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Nom Complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Téléphone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="pickup-date" class="block text-gray-700 mb-2">Date de prise</label>
+                                    <input type="date" id="pickup-date" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+                                </div>
+                                <div>
+                                    <label for="return-date" class="block text-gray-700 mb-2">Date de retour</label>
+                                    <input type="date" id="return-date" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="car-type" class="block text-gray-700 mb-2">Type de véhicule</label>
+                                <select id="car-type" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+                                    <option value="">Sélectionnez un véhicule</option>
+                                    <option value="economique">Économique</option>
+                                    <option value="standard">Standard</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="luxe">Luxe</option>
+                                    <option value="minivan">Minivan</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-full font-medium transition transform hover:scale-105 shadow-lg">Envoyer la demande</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Ce Que Disent Nos Clients</h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Témoignage 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl relative">
+                    <div class="absolute -top-4 -left-4 bg-cyan-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="mb-6 text-gray-600 italic">"Service exceptionnel! J'ai loué une voiture pour une semaine et tout s'est parfaitement déroulé. Le véhicule était propre et en excellent état. Je recommande vivement!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-bold">Sophie Martin</div>
+                            <div class="text-sm text-gray-500">Casablanca</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Témoignage 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl relative">
+                    <div class="absolute -top-4 -left-4 bg-cyan-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="mb-6 text-gray-600 italic">"Très professionnel. J'avais besoin d'une voiture à la dernière minute et ils ont pu m'aider. Le prix était raisonnable et le service client est disponible 24/7."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-bold">Ahmed El Kadi</div>
+                            <div class="text-sm text-gray-500">Marrakech</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Témoignage 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl relative">
+                    <div class="absolute -top-4 -left-4 bg-cyan-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="mb-6 text-gray-600 italic">"Je loue régulièrement des voitures pour mes déplacements professionnels et Espace Auto est de loin le meilleur service au Maroc. Voitures récentes et processus simple."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-bold">Leila Benali</div>
+                            <div class="text-sm text-gray-500">Rabat</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Questions Fréquentes</h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- Question 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <button class="faq-question w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-lg font-medium text-gray-800">Quels documents sont nécessaires pour louer une voiture?</span>
+                        <i class="fas fa-chevron-down text-cyan-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Pour louer une voiture au Maroc, vous aurez besoin de votre permis de conduire valide (minimum 1 an d'ancienneté), d'une pièce d'identité (carte nationale ou passeport) et d'une carte de crédit au nom du conducteur principal pour la caution.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <button class="faq-question w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-lg font-medium text-gray-800">Y a-t-il une limite de kilométrage?</span>
+                        <i class="fas fa-chevron-down text-cyan-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Non, tous nos forfaits incluent un kilométrage illimité, vous pouvez conduire autant que vous le souhaitez sans frais supplémentaires.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <button class="faq-question w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-lg font-medium text-gray-800">Puis-je louer une voiture si j'ai moins de 25 ans?</span>
+                        <i class="fas fa-chevron-down text-cyan-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Oui, nous autorisons la location aux conducteurs âgés de 21 ans et plus. Cependant, une surprime jeune conducteur peut s'appliquer pour les moins de 25 ans.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <button class="faq-question w-full flex justify-between items-center p-6 focus:outline-none">
+                        <span class="text-lg font-medium text-gray-800">Que se passe-t-il en cas d'accident?</span>
+                        <i class="fas fa-chevron-down text-cyan-500 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">En cas d'accident, contactez immédiatement notre assistance 24/7. Tous nos véhicules sont assurés tous risques avec une franchise qui varie selon le type de véhicule et le forfait choisi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contactez-Nous</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">Vous avez des questions ou besoin d'aide? Notre équipe est à votre disposition pour vous répondre dans les plus brefs délais.</p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Adresse -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl text-center hover:bg-opacity-20 transition">
+                    <div class="text-4xl mb-4">
+                        <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl text-cyan-500 font-bold mb-3">Adresse</h3>
+                    <p class="text-cyan-300">123 Avenue Hassan II, Casablanca, Maroc</p>
+                </div>
+                
+                <!-- Téléphone -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl text-center hover:bg-opacity-20 transition">
+                    <div class="text-4xl mb-4">
+                        <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-phone-alt text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl text-cyan-500 font-bold mb-3">Téléphone</h3>
+                    <p class="text-cyan-300">+212 6 12 34 56 78</p>
+                    <p class="text-cyan-300">+212 5 22 33 44 55</p>
+                </div>
+                
+                <!-- Email -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl text-center hover:bg-opacity-20 transition">
+                    <div class="text-4xl mb-4">
+                        <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl text-cyan-500 font-bold mb-3">Email</h3>
+                    <p class="text-cyan-300">contact@espaceauto.ma</p>
+                    <p class="text-cyan-300">reservation@espaceauto.ma</p>
+                </div>
+            </div>
+            
+            <!-- Carte -->
+            <div class="max-w-6xl mx-auto mt-12 rounded-xl overflow-hidden shadow-xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.349646143038!2d-7.632787684798902!3d33.59609628073235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d3731f922c01%3A0x5e46c1e1fc83142d!2sAvenue%20Hassan%20II%2C%20Casablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo et description -->
+                <div>
+                    <a href="#" class="text-2xl font-bold flex items-center mb-4">
+                        <i class="fas fa-car mr-2 text-cyan-500"></i>
+                        <span>Espace Auto</span>
+                    </a>
+                    <p class="text-gray-400">Leader dans la location de voitures au Maroc avec des tarifs compétitifs et un service client exceptionnel.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-cyan-500 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-cyan-500 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-cyan-500 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-cyan-500 transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Liens rapides -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens Rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-cyan-500 transition">Accueil</a></li>
+                        <li><a href="#vehicules" class="text-gray-400 hover:text-cyan-500 transition">Nos Véhicules</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-cyan-500 transition">Services</a></li>
+                        <li><a href="#tarifs" class="text-gray-400 hover:text-cyan-500 transition">Tarifs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-cyan-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Heures d'ouverture -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Heures d'Ouverture</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Lundi - Vendredi</span>
+                            <span>8h - 20h</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Samedi</span>
+                            <span>9h - 18h</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Dimanche</span>
+                            <span>10h - 16h</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Abonnez-vous pour recevoir nos offres spéciales et actualités.</p>
+                    <form class="flex flex-col space-y-3">
+                        <div class="relative">
+                            <input type="email" placeholder="Votre email" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                                <i class="fas fa-envelope text-gray-400"></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                            <span>S'abonner</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="mt-4 flex items-center space-x-2 text-sm text-gray-400">
+                        <i class="fas fa-shield-alt text-cyan-500"></i>
+                        <span>Nous respectons votre vie privée</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 Espace Auto. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-cyan-500 text-sm transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-500 text-sm transition">Conditions générales</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-500 text-sm transition">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-cyan-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all hover:bg-cyan-600">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/car_01.js"></script>
+</body>
+</html>
+
